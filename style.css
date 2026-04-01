@@ -103,8 +103,8 @@ body {
 .photogallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    padding: 20px;
+    gap: 20px;
+    padding: 15px;
 }
 
 /* 📸 Card Styling */
@@ -123,7 +123,7 @@ body {
 /* 🖼️ Images */
 .card img {
     width: 100%;
-    height: 250px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -184,4 +184,37 @@ body {
     font-size: 18px;
     line-height: 1.8;
     color: #5a4634;
+}
+
+@media (max-width: 600px) {
+
+    /* 📸 Stack photos nicely */
+    .photogallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* 🖼️ Smaller images */
+    .card img {
+        height: 200px;
+    }
+
+    /* 📝 Text adjustments */
+    .introparagraph {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .closingstatement {
+        padding: 20px;
+        margin: 30px 10px;
+    }
+
+    .closingstatement p {
+        font-size: 18px;
+    }
+
+    /* 🌸 Navbar spacing */
+    .nav-link {
+        font-size: 16px;
+    }
 }
